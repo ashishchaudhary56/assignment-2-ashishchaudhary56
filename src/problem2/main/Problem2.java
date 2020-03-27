@@ -19,5 +19,12 @@ public class Problem2 {
             System.out.print(pre[0]+ " ");
         }
     }
+
+    private static void printPostOrder(int[] copyOfRange, int[] copyOfRange1, int i) {
+
+    }
+
+
 }
+
 

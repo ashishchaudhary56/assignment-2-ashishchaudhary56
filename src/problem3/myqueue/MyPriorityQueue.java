@@ -10,7 +10,7 @@ import java.util.Arrays;
 import java.util.Collections;
 
 public class MyPriorityQueue {
-    static void sort(Integer arr[],int n)
+    static void twoWaySort(Integer arr[],int n,int length)
     {
         int i=0,r=n-1;
         int k=0;

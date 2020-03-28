@@ -13,8 +13,8 @@ import java.util.Scanner;
 public class MyMain {
     public static void main(String[] args) {
 Scanner sc=new Scanner(System.in);
-int in[] =sc.nextInt();
-int pre[]=sc.nextInt();
+int in[] =new int[];
+int pre[]=newInt[];
 int n=in.length;
         System.out.println("postorder ");
         printPostOrder(in,pre,n);

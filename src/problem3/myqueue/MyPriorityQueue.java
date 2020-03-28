@@ -6,5 +6,28 @@
  */
 package problem3.myqueue;
 
+import java.util.Arrays;
+import java.util.Collections;
+
 public class MyPriorityQueue {
+    static void sort(Integer arr[],int n)
+    {
+        int i=0,r=n-1;
+        int k=0;
+        while(i<r){
+            while(arr[i]%2 !=0){
+                i++;
+                k++;
+            }
+            while(arr[r]%2==0 && i<r)
+                r--;
+            if(i<r){
+                int temp=arr[i];
+                arr[i]=arr[r];
+                arr[r]=temp;
+            }
+        }
+        Arrays.sort(arr,0,k, Collections.reverseOrder());
+        Arrays.sort(arr,k,n);
+    }
 }

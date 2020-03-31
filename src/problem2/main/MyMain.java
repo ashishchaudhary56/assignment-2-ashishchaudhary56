@@ -6,20 +6,33 @@
  */
 package problem2.main;
 
+import problem1.mybst.MyBinarySearchTree;
+import problem1.node.TreeNode;
+
 import java.util.Scanner;
 
 // executable class
 // use problem1.mybst.MyBinarySearchTree class for creating binary tree
 public class MyMain {
     public static void main(String[] args) {
-Scanner sc=new Scanner(System.in);
-int in[] =new int[];
-int pre[]=newInt[];
-int n=in.length;
-        System.out.println("postorder ");
-        printPostOrder(in,pre,n);
-    }
+        Problem2 t = new Problem2();
+        MyBinarySearchTree mst = new MyBinarySearchTree();
+        TreeNode root = new TreeNode(10);
+        mst.insert(root, 5);
+        mst.insert(root, 1);
+        mst.insert(root, 15);
+        mst.insert(root, 9);
+        mst.insert(root, 7);
+        mst.insert(root, 12);
+        mst.insert(root, 30);
+        mst.insert(root, 25)
+        mst.insert(root, 40);
+        mst.insert(root, 55);
+        mst.insert(root, 6);
+        mst.insert(root, 3);
+        t.printPreorder(root);
 
-    private static void printPostOrder(int[] in, int[] pre, int n) {
+        System.out.println();
+        t.printPostorder(root);
     }
 }

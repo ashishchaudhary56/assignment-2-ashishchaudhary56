@@ -5,6 +5,11 @@
  *  Time: 7:06 PM
  */
 package problem5.main;
+
+import problem5.student.Student;
+
+import java.util.Scanner;
+
 //executable class
 public class MyMain {
     public static void main(String[] args) {
@@ -14,7 +19,6 @@ Node node;
             node =new Node(new Student());
             m.enqueue(node);
 
-        }
         m.printQueue();
         m.remove(new Scanner(System.in).next());
         m.printQueue();

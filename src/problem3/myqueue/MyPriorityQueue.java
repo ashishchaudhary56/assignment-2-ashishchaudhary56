@@ -6,28 +6,51 @@
  */
 package problem3.myqueue;
 
+import problem3.node.Node;
+
 import java.util.Arrays;
 import java.util.Collections;
 
 public class MyPriorityQueue {
-    static void twoWaySort(Integer arr[],int n,int length)
-    {
-        int i=0,r=n-1;
-        int k=0;
-        while(i<r){
-            while(arr[i]%2 !=0){
-                i++;
-                k++;
+    private Node front;
+    private Node rear;
+    public MyPriorityQueue(){
+        this.front=null;
+        this.rear=null;
+
+    }
+    public boolean isEmpty(){
+        return front==null;
+    }
+    public void insert(int dat,int proirity){
+        Node n=new Node(data,proirity);
+        if(isEmpty()||n.getPriority()< front.getPriority()){
+            n.setNext();ext(front);
+            front=n;
+
+        }
+        else{
+            Node tem=front;
+            while(tem.getNext()!=null && tem.getNext().getPriority()<=n.getPriority()) {
+                tem = tem.getNext();
             }
-            while(arr[r]%2==0 && i<r)
-                r--;
-            if(i<r){
-                int temp=arr[i];
-                arr[i]=arr[r];
-                arr[r]=temp;
+            n.setNext(tem.getNext());
+            tem.setNext(n);
+            }
+
+        }
+        public void display(){
+        if(isEmpty()){
+            System.out.println("undeflow");
+
+        }
+        else{
+            Node tem=front;
+            while(tem!=null){
+                System.out.println(tem.getData()+ " "+tem.getPriority());
+                tem=tem.getNext()
             }
         }
-        Arrays.sort(arr,0,k, Collections.reverseOrder());
-        Arrays.sort(arr,k,n);
     }
+
 }

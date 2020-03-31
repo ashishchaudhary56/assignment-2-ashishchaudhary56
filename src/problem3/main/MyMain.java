@@ -6,6 +6,8 @@
  */
 package problem3.main;
 
+import problem3.myqueue.MyPriorityQueue;
+
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -13,13 +15,13 @@ import java.util.Scanner;
 // use problem5.student.Student class to create object of student
 public class MyMain {
     public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
-Integer arr[]=new Integer[];
-int n=sc.nextInt();
-twoWaySort(arr,arr.length);
-        System.out.println(Arrays.toString(arr));
+        MyPriorityQueue m = new MyPriorityQueue();
+        m.insert(30, 3);
+        m.insert(40, 4);
+        m.insert(10, 1);
+        m.insert(20, 2);
+        m.display()
     }
-
 
 
 
